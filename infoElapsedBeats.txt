@@ -4,6 +4,42 @@ https://github.com/piem/aubio is the development location.
 
 
 TODO
+StandardError: error creating object
+    /usr/bin/python2.7 /home/dalem/PycharmProjects/elapsedbeats/aubiocut.py drum_Larry_Youngs_Fuel_-_Sticky_Wicket.ogg
+    Unable to import Numpy array from aubio module (error -1)
+    AUBIO ERROR: source_wavread: could not find RIFF header in drum_Larry_Youngs_Fuel_-_Sticky_Wicket.ogg
+    AUBIO ERROR: source: failed creating aubio source with drum_Larry_Youngs_Fuel_-_Sticky_Wicket.ogg at samplerate 0 with hop_size 256
+    Traceback (most recent call last):
+      File "/home/dalem/PycharmProjects/elapsedbeats/aubiocut.py", line 152, in <module>
+        s = source(source_file, samplerate, hopsize)
+    StandardError: error creating object
+
+    Same with keyboard_Cold_Blood_-_Baby_I_Love_You.ogg
+    Same with bass_Nights_Creatures_-_Thats_the_night.ogg
+    Same with Fr-grenouille.ogg
+
+    Yet the website http://aubio.org/news works fine with those audio files.
+    I created this issue https://github.com/piem/aubio/issues/13
+
+
+
+Logs
+Thursday 11 September 2014 7:56 AM CST
+Trying to get aubio installed on Ubuntu
+
+
+Thursday 11 September 2014 8:58 AM CST
+Failed modules
+    Python 2.7.5+ (/usr/bin/python2.7)
+    aubio._aubio
+    Generation of skeletons for the modules above will be tried again when the modules are updated or a new version of generator is available.
+
+    fixed
+    updatedb
+    locate libaubio.so
+    pushd /usr/lib
+    ln -s /usr/local/lib/libaubio.so.4 .
+
 How do I install aubio on Ubuntu?
     Install packages failed: Error occurred when installing package aubio.
 
@@ -19,8 +55,5 @@ How do I install aubio on Ubuntu?
     No distributions at all found for aubio
     Storing complete log in /root/.pip/pip.log
 
-
-
-Logs
-Thursday 11 September 2014 7:56 AM CST
-Trying to get aubio installed on Ubuntu
+    fixed
+    Follow http://aubio.org/download then http://aubio.org/installation
