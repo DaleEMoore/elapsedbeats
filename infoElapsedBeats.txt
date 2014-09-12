@@ -21,6 +21,11 @@ StandardError: error creating object
     Yet the website http://aubio.org/news works fine with those audio files.
     I created this issue https://github.com/piem/aubio/issues/13
 
+    Second meeting at Panara Bread Thu 11 Sep 2014 10 AM CST, Devi, Nihar, Dale.
+    Devi - is it doable.
+    Nihar - 2 use cases; demo show it Elapsed Beats (EB) use.
+
+    try python2 at install? Nope, bubbles gets to the same failure.
 
 
 Logs
@@ -57,3 +62,4 @@ How do I install aubio on Ubuntu?
 
     fixed
     Follow http://aubio.org/download then http://aubio.org/installation
+    python2?
