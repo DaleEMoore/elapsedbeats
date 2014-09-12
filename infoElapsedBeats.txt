@@ -26,6 +26,23 @@ StandardError: error creating object
     Nihar - 2 use cases; demo show it Elapsed Beats (EB) use.
 
     try python2 at install? Nope, bubbles gets to the same failure.
+    python2 to run the code gets past that error and gets (or something like it):
+
+        /usr/bin/python3m /home/dalem/Downloads/pycharm-community-3.4.1/helpers/pydev/pydevd.py --multiproc --client 127.0.0.1 --port 55517 --file /home/dalem/PycharmProjects/elapsedbeats/aubiocut.py Fr-grenouille.ogg
+        Connected to pydev debugger (build 135.1057)
+        pydev debugger: process 2181 is connecting
+
+        Traceback (most recent call last):
+          File "/home/dalem/Downloads/pycharm-community-3.4.1/helpers/pydev/pydevd.py", line 1733, in <module>
+            debugger.run(setup['file'], None, None)
+        File "/home/dalem/Downloads/pycharm-community-3.4.1/helpers/pydev/pydevd.py", line 1226, in run
+            pydev_imports.execfile(file, globals, locals)  # execute the script
+        File "/home/dalem/Downloads/pycharm-community-3.4.1/helpers/pydev/_pydev_execfile.py", line 38, in execfile
+            exec(compile(contents+"\n", file, 'exec'), glob, loc) #execute the script
+        File "/home/dalem/PycharmProjects/elapsedbeats/aubiocut.py", line 138
+            print "no file name given\n", usage
+                               ^
+        SyntaxError: invalid syntax
 
 
 Logs
