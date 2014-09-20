@@ -4,6 +4,49 @@ https://github.com/piem/aubio is the development location.
 
 
 TODO
+Evaluate the usefulness of aubio to play a song and show the elapsed beats.
+
+
+
+Logs
+Thursday 11 September 2014 7:56 AM CST
+Trying to get aubio installed on Ubuntu
+
+
+Thursday 11 September 2014 8:58 AM CST
+Failed modules
+    Python 2.7.5+ (/usr/bin/python2.7)
+    aubio._aubio
+    Generation of skeletons for the modules above will be tried again when the modules are updated or a new version of generator is available.
+
+    fixed
+    updatedb
+    locate libaubio.so
+    pushd /usr/lib
+    ln -s /usr/local/lib/libaubio.so.4 .
+
+How do I install aubio on Ubuntu?
+    Install packages failed: Error occurred when installing package aubio.
+
+    The following command was executed:
+
+    /home/dalem/Downloads/pycharm-community-3.4.1/helpers/packaging_tool.py install --build-dir /tmp/pycharm-packaging8895706410790923047.tmp aubio
+
+    The error output of the command:
+
+    Downloading/unpacking aubio
+      Could not find any downloads that satisfy the requirement aubio
+    Cleaning up...
+    No distributions at all found for aubio
+    Storing complete log in /root/.pip/pip.log
+
+    fixed
+    Follow http://aubio.org/download then http://aubio.org/installation
+    python2?
+
+
+
+Sa 20 Sep 2014 4:15 PM CST
 StandardError: error creating object
     /usr/bin/python2.7 /home/dalem/PycharmProjects/elapsedbeats/aubiocut.py drum_Larry_Youngs_Fuel_-_Sticky_Wicket.ogg
     Unable to import Numpy array from aubio module (error -1)
@@ -44,39 +87,19 @@ StandardError: error creating object
                                ^
         SyntaxError: invalid syntax
 
+        Trying suggestion from aubio author to install but am still having problems.
+        Perhaps these items will install easier on newer Ubuntu. Starting from LAMP
+        VM for Aubio VM Ubuntu 14.04 LTS.
 
-Logs
-Thursday 11 September 2014 7:56 AM CST
-Trying to get aubio installed on Ubuntu
+        apt-get install aubio-tools libaubio-dev libaubio-doc
 
+        /usr/bin/python2.7 /home/dalem/PycharmProjects/elapsedbeats/aubiocut.py Fr-grenouille.ogg
+        0.0000
+        0.2458
+        0.3513
+        0.4642
+        0.5787
+        0.7259
+        found 6 timestamps in Fr-grenouille.ogg (total 1.37s at 44000Hz)
 
-Thursday 11 September 2014 8:58 AM CST
-Failed modules
-    Python 2.7.5+ (/usr/bin/python2.7)
-    aubio._aubio
-    Generation of skeletons for the modules above will be tried again when the modules are updated or a new version of generator is available.
-
-    fixed
-    updatedb
-    locate libaubio.so
-    pushd /usr/lib
-    ln -s /usr/local/lib/libaubio.so.4 .
-
-How do I install aubio on Ubuntu?
-    Install packages failed: Error occurred when installing package aubio.
-
-    The following command was executed:
-
-    /home/dalem/Downloads/pycharm-community-3.4.1/helpers/packaging_tool.py install --build-dir /tmp/pycharm-packaging8895706410790923047.tmp aubio
-
-    The error output of the command:
-
-    Downloading/unpacking aubio
-      Could not find any downloads that satisfy the requirement aubio
-    Cleaning up...
-    No distributions at all found for aubio
-    Storing complete log in /root/.pip/pip.log
-
-    fixed
-    Follow http://aubio.org/download then http://aubio.org/installation
-    python2?
+        YEA!
